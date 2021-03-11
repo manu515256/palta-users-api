@@ -130,7 +130,7 @@ export default class UsuarioController {
             }
 
             const reg = await models.User.findByIdAndUpdate({ _id: req.body._id }, 
-                { rol: req.body.rol, name: req.body.name, email: req.body.email, password: req.body.password, workRole: req.body.workrole });
+                { rol: req.body.rol, name: req.body.name, email: req.body.email, password: req.body.password });
             
                 res.status(200).json(reg);
 
