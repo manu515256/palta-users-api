@@ -8,13 +8,13 @@ let auth: Iauth = new Auth();
 const router = routerx();
 
 router.post('/addchild', upload.single('profilePic'), usuarioController.addchild);
-router.get('/listchilds', auth.verifyAdmin, usuarioController.listchilds);
-router.put('/deactivate', auth.verifyAdmin, usuarioController.deactivate);
+router.get('/listchilds', auth.verifyUser, usuarioController.listchilds);
+router.put('/deactivate', auth.verifyUser, usuarioController.deactivate);
 router.post('/add', upload.single('profilePic'), usuarioController.add);
-router.put('/activate', auth.verifyAdmin, usuarioController.activate);
+router.put('/activate', auth.verifyUser, usuarioController.activate);
 router.delete('/remove', auth.verifyAdmin, usuarioController.remove);
-router.put('/update', auth.verifyAdmin, usuarioController.update);
-router.get('/query', auth.verifyAdmin, usuarioController.query);
+router.put('/update', auth.verifyUser, usuarioController.update);
+router.get('/query', auth.verifyUser, usuarioController.query);
 router.get('/list', auth.verifyAdmin, usuarioController.list);
 router.post('/login', usuarioController.login);
 
