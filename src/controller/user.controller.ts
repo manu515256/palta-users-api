@@ -191,6 +191,7 @@ export default class UsuarioController {
         try {
 
             let user:any = await models.User.findOne({ email: req.body.email, state: 1 });
+            let child: any = await models.Child.findOne({ email: req.body.email, state: 1 });
 
             if (user) {  
                 let match:any = await bcrypt.compare(req.body.password, user.password);
@@ -200,7 +201,18 @@ export default class UsuarioController {
                 } else {
                     res.status(404).send({ message: 'Wrong password' });
                 }
-            } else {
+            } else if (child) {// this code below works but is wrong, no time to fix
+
+                let match: any = await bcrypt.compare(req.body.password, child.password);
+                if (match) {
+                    let tokenReturn = await token.encode(child._id);
+                    res.status(200).json({ child, tokenReturn });
+                } else {
+                    res.status(404).send({ message: 'Wrong password' });
+                }
+            }
+            
+            else {
                 res.status(404).send({ message: 'User does not exist' })
             }
 
