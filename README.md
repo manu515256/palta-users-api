@@ -3,6 +3,8 @@
 
  **Requerimientos**
  
+ DOCUMENTACION INCOMPLETA, TRABAJANDO EN ELLA
+ 
 > Mongodb
 
 > NodeJS +10
