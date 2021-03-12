@@ -3,8 +3,6 @@
 
  **Requerimientos**
  
- DOCUMENTACION INCOMPLETA, TRABAJANDO EN ELLA
- 
 > Mongodb
 
 > NodeJS +10
@@ -30,17 +28,18 @@
 ## Endpoints
 **USUARIO**
 
-POST
+### POST
 >`/api/`  `user`/  `add` 
 >>Recibe body (Obligatorio)
 >
 	{
 		name: STRING,
 		password: STRING,
-		email: STRING
+		email: STRING,
+		profilePic: archivo jpg/png
 	}
 	
-POST
+### POST
 >`/api/`  `user`/  `login` 
 >>Recibe body (Obligatorio)
 >
@@ -50,7 +49,7 @@ POST
 	}
 	
 	
-DELETE
+### DELETE
 >`/api/`  `user`/  `remove` 
 >>Recibe:
 >
@@ -59,6 +58,18 @@ DELETE
 	}
 >
 
-
-
+### POST
+>`/api/`  `user`/  `addchild` 
+>>Recibe:
+>
+	{
+		name: STRING,
+		password: STRING,
+		email: STRING,
+		profilePic: archivo jpg/png
+	}
+>
+### GET
+>`/api/`  `user`/  `listchilds` 
+>
 	
