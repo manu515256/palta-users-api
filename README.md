@@ -59,7 +59,7 @@
 >
 
 ### POST
->`/api/`  `user`/  `addchild` 
+>`/api/`  `child`/  `add` 
 >>Recibe:
 >
 	{
@@ -70,6 +70,6 @@
 	}
 >
 ### GET
->`/api/`  `user`/  `listchilds` 
+>`/api/`  `child`/  `list` 
 >
 	
