@@ -7,8 +7,7 @@ const usuarioController = new UsuarioController();
 let auth: Iauth = new Auth();
 const router = routerx();
 
-router.post('/addchild', upload.single('profilePic'), usuarioController.addchild);
-router.get('/listchilds', auth.verifyUser, usuarioController.listchilds);
+
 router.put('/deactivate', auth.verifyUser, usuarioController.deactivate);
 router.post('/add', upload.single('profilePic'), usuarioController.add);
 router.put('/activate', auth.verifyUser, usuarioController.activate);
