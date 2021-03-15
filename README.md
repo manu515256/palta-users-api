@@ -58,6 +58,8 @@
 	}
 >
 
+**Hijo**
+
 ### POST
 >`/api/`  `child`/  `add` 
 >>Recibe:
